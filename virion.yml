@@ -1,0 +1,6 @@
+name: libIPGeolocation
+version: 1.0.0
+antigen: edwinyoo44\libIPGeolocation
+php: [8.0]
+author: edwinyoo44
+description: You can use this to get the geolocation of an IP from ip-api.com.
