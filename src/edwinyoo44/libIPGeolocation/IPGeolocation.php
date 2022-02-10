@@ -13,7 +13,7 @@ class IPGeolocation {
 		}
 
 		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL, "http://ip-api.com/json/{$ip}?fields=status,message,continent,continentCode,country,countryCode,region,regionName,city,district");
+		curl_setopt($ch, CURLOPT_URL, "http://ip-api.com/json/{$ip}?fields=status,message,continent,continentCode,country,countryCode,region,regionName,city,district,proxy");
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 		curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 2);
 		curl_setopt($ch, CURLOPT_TIMEOUT, 3);
@@ -31,7 +31,8 @@ class IPGeolocation {
 			"region" => "unknown",
 			"regionName" => "unknown",
 			"city" => "unknown",
-			"district" => "unknown"
+			"district" => "unknown",
+			"proxy" => true
 		];
 
 		if (!isset($resultJSON['status'])) {
@@ -47,7 +48,8 @@ class IPGeolocation {
 			"region" => "localhost",
 			"regionName" => "localhost",
 			"city" => "localhost",
-			"district" => "localhost"
+			"district" => "localhost",
+			"proxy" => true
 		];
 
 		if ($resultJSON['status'] == "success") {
@@ -89,6 +91,10 @@ class IPGeolocation {
 
 	public static function getDistrict(String $ip): string {
 		return self::getLocation($ip, 'district');
+	}
+	
+	public static function isProxy(String $ip): bool {
+		return self::getLocation($ip, 'proxy');
 	}
 
 

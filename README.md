@@ -24,4 +24,8 @@ IPGeolocation::getCity(String $ip);
 
 IPGeolocation::getDistrict(String $ip);
 
+IPGeolocation::isProxy(String $ip); // return bool
+
+
+
 ```
