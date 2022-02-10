@@ -7,20 +7,21 @@ You can use this to get the geolocation of an IP from ip-api.com.
 ```
 use edwinyoo44\libIPGeolocation\IPGeolocation;
 
-MeowCoreIP2Location::getContinent(String $ip);
 
-MeowCoreIP2Location::getContinentCode(String $ip);
+IPGeolocation::getContinent(String $ip);
 
-MeowCoreIP2Location::getCountry(String $ip);
+IPGeolocation::getContinentCode(String $ip);
 
-MeowCoreIP2Location::getCountryCode(String $ip);
+IPGeolocation::getCountry(String $ip);
 
-MeowCoreIP2Location::getRegion(String $ip);
+IPGeolocation::getCountryCode(String $ip);
 
-MeowCoreIP2Location::getRegionName(String $ip);
+IPGeolocation::getRegion(String $ip);
 
-MeowCoreIP2Location::getCity(String $ip);
+IPGeolocation::getRegionName(String $ip);
 
-MeowCoreIP2Location::getDistrict(String $ip);
+IPGeolocation::getCity(String $ip);
+
+IPGeolocation::getDistrict(String $ip);
 
 ```
