@@ -23,7 +23,7 @@ class IPGeolocation {
 		$resultJSON = json_decode($result, true);
 
 		$locationData = [
-			"status" => "success",
+			"status" => "error",
 			"continent" => "unknown",
 			"continentCode" => "unknown",
 			"country" => "unknown",
@@ -59,6 +59,10 @@ class IPGeolocation {
 		self::$locationCache[$ip] = $locationData;
 		
 		return self::$locationCache[$ip][$tag];
+	}
+
+	public static function getStatus(String $ip): string {
+		return self::getLocation($ip, 'status');
 	}
 
 	public static function getContinent(String $ip): string {

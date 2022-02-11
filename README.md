@@ -8,21 +8,23 @@ You can use this to get the geolocation of an IP from ip-api.com.
 use edwinyoo44\libIPGeolocation\IPGeolocation;
 
 
-IPGeolocation::getContinent(String $ip);
+IPGeolocation::getStatus(String $ip); // return string success or error
 
-IPGeolocation::getContinentCode(String $ip);
+IPGeolocation::getContinent(String $ip); // return string
 
-IPGeolocation::getCountry(String $ip);
+IPGeolocation::getContinentCode(String $ip); // return string
 
-IPGeolocation::getCountryCode(String $ip);
+IPGeolocation::getCountry(String $ip); // return string
 
-IPGeolocation::getRegion(String $ip);
+IPGeolocation::getCountryCode(String $ip); // return string
 
-IPGeolocation::getRegionName(String $ip);
+IPGeolocation::getRegion(String $ip); // return string
 
-IPGeolocation::getCity(String $ip);
+IPGeolocation::getRegionName(String $ip); // return string
 
-IPGeolocation::getDistrict(String $ip);
+IPGeolocation::getCity(String $ip); // return string
+
+IPGeolocation::getDistrict(String $ip); // return string
 
 IPGeolocation::isProxy(String $ip); // return bool
 
