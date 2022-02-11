@@ -4,6 +4,8 @@ A virion for PocketMine-MP.
 You can use this to get the geolocation of an IP from ip-api.com.
 
 ## Usage
+You can see some example in here: [ProxyChecker](https://github.com/edwinyoo44/ProxyChecker)
+
 ```
 use edwinyoo44\libIPGeolocation\IPGeolocation;
 
